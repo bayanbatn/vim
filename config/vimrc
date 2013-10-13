@@ -1,0 +1,71 @@
+"Quora vimrc
+so ./quora_vim/vimrc
+
+"Taglist config
+let Tlist_Ctags_Cmd = "/home/naran/bin/ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>                                                                              
+map <F8> :!/home/naran/bin/ctags -R .<CR>
+
+let Tlist_Auto_Highlight_tag = 1
+let Tlist_Auto_Open = 0
+let Tlist_Auto_update = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Compact_Format = 1
+let Tlist_Show_One_File = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+
+"Pathogen 
+execute pathogen#infect()
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
+"Command-T
+"replace default selection to tab
+"let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<Up>', '<C-Up>', '<']
+"let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<Down>', '<C-Down>', '>']
+"let g:CommandTAcceptSelectionMap = '<C-CR>'
+"let g:CommandTAcceptSelectionSplitMap = '<C-s>'
+"let g:CommandTAcceptSelectionTabMap = ['<CR>', '<C-t>']
+
+" Needed for using vim in screen
+set term=xterm
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions+=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+"Miscelanneous
+set hlsearch                               "highlight search
+set guifont=Bitstream\ Vera\ Sans\ Mono\ 9 "font size
+set hidden                                 "store buffer edit history
+
+"Copy + pasta
+vnoremap <C-x> "+x
+vnoremap <C-c> "+y
+map <C-V> "+gP
+cmap <C-V> <C-R>+
+
+"Double click search
+noremap <2-LeftMouse> *
+inoremap <2-LeftMouse> <c-o>*
+
+"Buffered explorer config
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1 
+
+"Syntastic config TODO: TOO SLOW
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_check_on_open = 1          "toggle this to turn on flake8
+
+"For cleaning out vim swap files
+"set backupdir=./.backup,.,/tmp
+"set directory=.,./.backup,/tmp

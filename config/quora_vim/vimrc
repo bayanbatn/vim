@@ -1,0 +1,66 @@
+" ccheever vimrc
+
+" you may want to have your .vimrc source this file if you use vim
+
+" super tab completion
+source $ANS_ROOT/etc/vim/supertab.vim
+source $ANS_ROOT/etc/vim/colors.vim
+
+" set tags file
+set tags=$ANS_ROOT/web/lib/a/tags,tags
+
+
+" treat .phpt files as .php files
+au BufRead,BufNewFile *.phpt set filetype=php
+
+" defaults
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set showmatch " flashes matching paren when one is typed
+
+" tab conventions for php
+autocmd FileType php set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
+
+" tab conventions for sql
+autocmd FileType sql set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
+
+" tab conventions for js
+autocmd FileType javascript set ts=4|set shiftwidth=4|set expandtab|set autoindent|set softtabstop=4
+
+" python conventions
+autocmd FileType python set ts=4|set shiftwidth=4|set expandtab|set autoindent|set softtabstop=4
+autocmd FileType pyrex set ts=4|set shiftwidth=4|set expandtab|set autoindent|set softtabstop=4
+
+" actionscript
+autocmd BufRead *.as set filetype=actionscript|set shiftwidth=4|set expandtab|set autoindent|set softtabstop=4
+autocmd BufRead *.as source $ANS_ROOT/etc/vim/actionscript.vim
+
+" mxml
+autocmd BufRead *.mxml set filetype=mxml
+autocmd BufRead *.mxml source $ANS_ROOT/etc/vim/mxml.vim
+
+" cpp
+autocmd FileType cpp set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
+autocmd FileType h set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
+
+autocmd FileType cmake set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
+
+" syntax on and no highlight search
+set nohlsearch
+syntax on
+
+" Tab size for protobufs and thrift
+au BufRead,BufNewFile *.thrift set filetype=thrift
+autocmd FileType thrift :setlocal sw=2 ts=2 sts=2
+autocmd FileType thrift set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
+au! BufRead,BufNewFile *.proto set filetype=proto
+autocmd FileType proto set ts=2|set shiftwidth=2|set expandtab|set autoindent|set softtabstop=2
+
+set backspace=2 " make backspace work like most other apps
+
+" turn on the ruler that gives you row and col position at the bottom
+set ruler
+
+au BufRead,BufNewFile *.scala source $ANS_ROOT/etc/vim/scala.vim
+au BufRead,BufNewFile *.go source $ANS_ROOT/etc/vim/go.vim
