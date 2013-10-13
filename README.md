@@ -1,4 +1,0 @@
-vim
-===
-
-my vim configuration
