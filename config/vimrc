@@ -1,5 +1,5 @@
 "Quora vimrc
-so ./quora_vim/vimrc
+so ~/vim/config/quora_vim/vimrc
 
 "Taglist config
 let Tlist_Ctags_Cmd = "/home/naran/bin/ctags"

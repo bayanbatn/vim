@@ -3,11 +3,11 @@
 " you may want to have your .vimrc source this file if you use vim
 
 " super tab completion
-source $ANS_ROOT/etc/vim/supertab.vim
-source $ANS_ROOT/etc/vim/colors.vim
+source ~/vim/config/quora_vim/supertab.vim
+source ~/vim/config/quora_vim/colors.vim
 
 " set tags file
-set tags=$ANS_ROOT/web/lib/a/tags,tags
+" set tags=$ANS_ROOT/web/lib/a/tags,tags "specific to quora
 
 
 " treat .phpt files as .php files
