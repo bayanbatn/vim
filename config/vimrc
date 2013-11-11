@@ -1,11 +1,14 @@
 "Quora vimrc
 so ~/vim/config/quora_vim/vimrc
+so ~/vim/config/mac_vimrc "enabled for macs
 
 "Taglist config
 let Tlist_Ctags_Cmd = "/home/naran/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>                                                                              
-map <F8> :!/home/naran/bin/ctags -R .<CR>
+"Toggle between mac and linux
+"map <F8> :!/home/naran/bin/ctags -R .<CR>
+map <F8> :!/Users/Naran/bin/ctags -R .<CR>
 
 let Tlist_Auto_Highlight_tag = 1
 let Tlist_Auto_Open = 0

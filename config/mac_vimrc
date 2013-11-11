@@ -1,0 +1,26 @@
+" This file should be specifically enabled for macvim
+
+" Switching buffers
+" left
+inoremap <silent> <C-h> <esc><C-W>h
+vnoremap <silent> <C-h> <esc><C-W>h
+nnoremap <silent> <C-h> <C-W>h
+
+" down
+inoremap <silent> <C-j> <esc><C-W>j
+vnoremap <silent> <C-j> <esc><C-W>j
+nnoremap <silent> <C-j> <C-W>j
+
+" right
+inoremap <silent> <C-l> <esc><C-W>l
+vnoremap <silent> <C-l> <esc><C-W>l
+nnoremap <silent> <C-l> <C-W>l
+
+" up
+inoremap <silent> <C-k> <esc><C-W>k
+vnoremap <silent> <C-k> <esc><C-W>k
+nnoremap <silent> <C-k> <C-W>k
+
+" Switching tabs
+nnoremap <silent> <tab> :bn<CR>
+nnoremap <silent> <S-tab> :bp<CR>
