@@ -61,6 +61,3 @@ set backspace=2 " make backspace work like most other apps
 
 " turn on the ruler that gives you row and col position at the bottom
 set ruler
-
-au BufRead,BufNewFile *.scala source $ANS_ROOT/etc/vim/scala.vim
-au BufRead,BufNewFile *.go source $ANS_ROOT/etc/vim/go.vim
