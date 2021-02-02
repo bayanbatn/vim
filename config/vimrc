@@ -1,5 +1,5 @@
 "Quora vimrc
-"so ~/vim/config/quora_vim/vimrc
+so ~/vim/config/qvimrc
 "so ~/vim/config/mac_vimrc "enabled for macs
 
 "Taglist config
@@ -45,9 +45,9 @@ if has("gui_running")
 endif
 
 "Miscelanneous
-set hlsearch                               "highlight search
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 11"font size
-set hidden                                 "store buffer edit history
+set hlsearch                                "highlight search
+set guifont=Bitstream\ Vera\ Sans\ Mono\ 11 "font size
+set hidden                                  "store buffer edit history
 
 "Copy + pasta
 vnoremap <C-x> "+x
