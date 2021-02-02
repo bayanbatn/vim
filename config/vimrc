@@ -1,14 +1,14 @@
 "Quora vimrc
 so ~/vim/config/qvimrc
-"so ~/vim/config/mac_vimrc "enabled for macs
+so ~/vim/config/mac_vimrc "enabled for macs
 
 "Taglist config
 let Tlist_Ctags_Cmd = "/home/naranb/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>                                                                              
 "Toggle between mac and linux
-map <F8> :!/home/naranb/bin/ctags -R .<CR>
-"map <F8> :!/Users/Naran/bin/ctags -R .<CR>
+"map <F8> :!/home/naranb/bin/ctags -R .<CR>
+map <F8> :!/Users/naran.bayanbat/bin/ctags -R .<CR>
 
 let Tlist_Auto_Highlight_tag = 1
 let Tlist_Auto_Open = 0
@@ -72,59 +72,6 @@ let g:syntastic_check_on_open = 1          "toggle this to turn on flake8
 "For cleaning out vim swap files
 "set backupdir=./.backup,.,/tmp
 "set directory=.,./.backup,/tmp
-
-
-" New tab
-nnoremap <silent> <C-t> :tabnew<CR>
-vnoremap <silent> <C-t> :tabnew<CR>
-inoremap <silent> <C-t> <Esc>:tabnew<CR>
-
-" Close tab
-nnoremap <silent> <C-w> :tabclose<CR>
-vnoremap <silent> <C-w> :tabclose<CR>
-inoremap <silent> <C-w> <Esc>:tabclose<CR>
-
-" Switch tabs
-" note that this is mapped to <C-{> and <C-}> because
-" AutoKey already maps <C-{> to <C-S-tab>
-nnoremap <silent> <C-S-tab> :tabprevious<CR>
-nnoremap <silent> <C-tab> :tabnext<CR>
-vnoremap <silent> <C-S-tab> :tabprevious<CR>
-vnoremap <silent> <C-tab> :tabnext<CR>
-inoremap <silent> <C-S-tab> :tabprevious<CR>
-inoremap <silent> <C-tab> :tabnext<CR>
-" backup switch tabs shortcut
-nnoremap <silent> <C-Left> :tabprevious<CR>
-nnoremap <silent> <C-Right> :tabnext<CR>
-vnoremap <silent> <C-Left> :tabprevious<CR>
-vnoremap <silent> <C-Right> :tabnext<CR>
-inoremap <silent> <C-Left> :tabprevious<CR>
-inoremap <silent> <C-Right> :tabnext<CR>
-
-
-" Switching buffers
-" left
-inoremap <silent> <C-h> <esc><C-W>h
-vnoremap <silent> <C-h> <esc><C-W>h
-nnoremap <silent> <C-h> <C-W>h
-
-" down
-inoremap <silent> <C-j> <esc><C-W>j
-vnoremap <silent> <C-j> <esc><C-W>j
-nnoremap <silent> <C-j> <C-W>j
-
-" right
-inoremap <silent> <C-l> <esc><C-W>l
-vnoremap <silent> <C-l> <esc><C-W>l
-nnoremap <silent> <C-l> <C-W>l
-
-" up
-inoremap <silent> <C-k> <esc><C-W>k
-vnoremap <silent> <C-k> <esc><C-W>k
-nnoremap <silent> <C-k> <C-W>k
-
-" re-map escape: need this due to interaction with AutoKey
-nnoremap <silent> <A-Left> <esc>
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
