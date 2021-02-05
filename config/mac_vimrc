@@ -24,3 +24,24 @@ nnoremap <silent> <C-k> <C-W>k
 " Switching tabs
 nnoremap <silent> <tab> :bn<CR>
 nnoremap <silent> <S-tab> :bp<CR>
+
+
+"Taglist config
+let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+let Tlist_WinWidth = 50
+let Tlist_Auto_Highlight_tag = 1
+let Tlist_Auto_Open = 0
+let Tlist_Auto_update = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Compact_Format = 1
+let Tlist_Show_One_File = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+
+map <F4> :TlistToggle<cr>
+map <F8> :!ctags -R .<CR>
+
+"this is a mac specific fix for the autotag plugin
+"based on https://github.com/craigemery/vim-autotag/issues/34
+let g:autotagStartMethod='fork'
