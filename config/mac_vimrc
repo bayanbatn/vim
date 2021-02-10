@@ -45,3 +45,12 @@ map <F8> :!ctags -R .<CR>
 "this is a mac specific fix for the autotag plugin
 "based on https://github.com/craigemery/vim-autotag/issues/34
 let g:autotagStartMethod='fork'
+
+"Specific to Opendoor repo setup
+"Recommended from: https://rderik.com/blog/ctags-vim-multiple-projects/
+"set tags=$HOME/signals/tags,$HOME/renaissance/tags,$HOME/honeycomb/tags,$HOME/noise/tags
+
+" Followed ideas from:
+" https://vi.stackexchange.com/questions/2724/how-to-add-multiple-git-projects-to-ctrl-p-search-path
+let g:ctrlp_follow_symlinks=1
+"let g:ctrlp_root_markers=['.root']
