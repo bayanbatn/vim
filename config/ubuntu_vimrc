@@ -66,3 +66,6 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 
 map <F4> :TlistToggle<cr>
 map <F8> :!ctags -R .<CR>
+
+"Miscelanneous
+set guifont=Bitstream\ Vera\ Sans\ Mono\ 11 "font size

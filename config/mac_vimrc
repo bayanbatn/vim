@@ -53,4 +53,5 @@ let g:autotagStartMethod='fork'
 " Followed ideas from:
 " https://vi.stackexchange.com/questions/2724/how-to-add-multiple-git-projects-to-ctrl-p-search-path
 let g:ctrlp_follow_symlinks=1
-"let g:ctrlp_root_markers=['.root']
+" need to override default 'ra' value since we use softlinks in ~/signals directory
+let g:ctrlp_working_path_mode = ''

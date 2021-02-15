@@ -17,7 +17,6 @@ endif
 
 "Miscelanneous
 set hlsearch                                "highlight search
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 11 "font size
 set hidden                                  "store buffer edit history
 
 "Copy + pasta
@@ -48,3 +47,14 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+" https://www.mattlayman.com/blog/2019/supercharging-vim-blazing-fast-search/
+let g:rg_command = 'rg --vimgrep -S -L'
+let g:rg_highlight = 1
+let g:rg_derive_root = 0
+
+" https://vim.fandom.com/wiki/Search_for_current_word_in_multiple_files
+" by default, do not search tests directories
+nnoremap rg :Rg <cword> --type-add 'tests:*tests.py' --type-not tests .<CR>
+" this command searches inclusive of test files
+nnoremap rt :Rg <cword> .<CR>
