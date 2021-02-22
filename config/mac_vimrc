@@ -40,7 +40,7 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 
 map <F4> :TlistToggle<cr>
-map <F8> :!ctags -R .<CR>
+map <F8> :!ctags --exclude=.venv -R . <CR>
 
 "this is a mac specific fix for the autotag plugin
 "based on https://github.com/craigemery/vim-autotag/issues/34

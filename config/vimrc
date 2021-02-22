@@ -58,3 +58,8 @@ let g:rg_derive_root = 0
 nnoremap rg :Rg <cword> --type-add 'tests:*tests.py' --type-not tests .<CR>
 " this command searches inclusive of test files
 nnoremap rt :Rg <cword> .<CR>
+
+" vim black and black-macchiato setup
+let g:black_linelength = 120
+autocmd FileType python vnoremap <buffer> <Leader>f <plug>(BlackMacchiatoSelection)
+autocmd FileType python nnoremap <buffer> <Leader>f <plug>(BlackMacchiatoCurrentLine)
