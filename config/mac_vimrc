@@ -55,3 +55,5 @@ let g:autotagStartMethod='fork'
 let g:ctrlp_follow_symlinks=1
 " need to override default 'ra' value since we use softlinks in ~/signals directory
 let g:ctrlp_working_path_mode = ''
+" relevant if too many files: https://stackoverflow.com/questions/17469558/ctrl-p-cant-find-my-file
+let g:ctrlp_max_files=0
