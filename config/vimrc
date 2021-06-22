@@ -55,7 +55,7 @@ let g:rg_derive_root = 0
 
 " https://vim.fandom.com/wiki/Search_for_current_word_in_multiple_files
 " by default, do not search tests directories
-nnoremap rg :Rg <cword> --type-add 'tests:*test*.py' --type-not tests .<CR>
+nnoremap rg :Rg <cword> --type-add 'tests:*test*.py' --type-not tests --type-add 'note:*.ipynb' --type-not note --type-add 'tag:tags' --type-not tag .<CR>
 " this command searches inclusive of test files
 nnoremap rt :Rg <cword> .<CR>
 

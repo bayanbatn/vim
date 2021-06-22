@@ -60,8 +60,8 @@ let g:ctrlp_working_path_mode = ''
 " relevant if too many files: https://stackoverflow.com/questions/17469558/ctrl-p-cant-find-my-file
 let g:ctrlp_max_files=0
 " exclude packages / virtual environment files from dir search
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|packages|venv|\.venv)$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|venv|\.venv|__pycache__)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](node_modules|packages|venv|\.venv)$',
-  \ 'file': '\v\.(swp|so|dll)$',
+  \ 'dir':  '\v[\/](node_modules|venv|\.venv|__pycache__)$',
+  \ 'file': '\v\.(swp|so|dll|pyc)$',
   \ }
