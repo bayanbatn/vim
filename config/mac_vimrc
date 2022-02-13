@@ -43,6 +43,7 @@ map <F4> :TlistToggle<cr>
 " Note: this creates a dependency from ctags on ripgrep, but the speedup is worth it
 " context: https://github.com/universal-ctags/ctags/issues/218#issuecomment-377717588
 map <F8> :!~/vim/bin/ctags.sh <CR>
+map <F9> :!gotags -R ./* > tags <CR>
 
 "this is a mac specific fix for the autotag plugin
 "based on https://github.com/craigemery/vim-autotag/issues/34
@@ -65,3 +66,31 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](node_modules|venv|\.venv|__pycache__)$',
   \ 'file': '\v\.(swp|so|dll|pyc)$',
   \ }
+
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
