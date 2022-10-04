@@ -1,2 +1,6 @@
 #!/bin/sh
-rg --type-add 'tests:*test*.py' --type-not tests --type-add 'note:*.ipynb' --type-not note --files --follow | ctags -R --links=no -L -
+rg --type-add 'testsdir:*\/tests\/*' --type-not testsdir \
+    --type-add 'testsfile:*tests.py' --type-not testsfile \
+    --type-add 'note:*.ipynb' --type-not note \
+    --files --follow \
+    | ctags -R --links=no -L -
