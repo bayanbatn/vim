@@ -5,7 +5,6 @@ so ~/vim/config/mac_vimrc "enabled for macs
 "Pathogen 
 execute pathogen#infect()
 call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -63,3 +62,8 @@ nnoremap rt :Rg <cword> .<CR>
 let g:black_linelength = 120
 autocmd FileType python vnoremap <buffer> <Leader>f <plug>(BlackMacchiatoSelection)
 autocmd FileType python nnoremap <buffer> <Leader>f <plug>(BlackMacchiatoCurrentLine)
+
+" vim style
+syntax enable
+set background=dark
+colorscheme solarized
