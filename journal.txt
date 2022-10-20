@@ -1,0 +1,7 @@
+
+10/10/2022:
+- setup Mac OS Terminal.app to run with solarized theme: https://github.com/tomislav/osx-terminal.app-colors-solarized
+- import the theme into Terminal under Preferences
+
+- for Command-T install in macvim; make sure vim is installed with "brew install macvim" instead of "xbrew install macvim"
+- Command-T runs with the M1 arm architecture, so xbrew install will mean we won't be able to make Command-T work later
