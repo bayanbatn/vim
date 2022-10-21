@@ -1,5 +1,25 @@
 
-10/10/2022:
+10/21/2022:
+List of vim plugins used:
+- Command-T
+- ctrlp
+- nerdcommenter
+- supertab
+- syntastic
+- tagbar
+- taglist
+- vim-colors-solarized
+- vim-fugitive
+- vim-ripgrep
+- vim-taglist
+
+App dependencies:
+- ripgrep
+- ctags
+- asdf  [optional, for managing ruby]
+
+
+10/20/2022:
 - setup Mac OS Terminal.app to run with solarized theme: https://github.com/tomislav/osx-terminal.app-colors-solarized
 - import the theme into Terminal under Preferences
 
