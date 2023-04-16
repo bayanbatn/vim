@@ -1,4 +1,10 @@
 
+04/16/2023:
+List of vim plugins added:
+- vim/sensible
+- vim/surround
+- vim/copilot
+
 10/21/2022:
 List of vim plugins used:
 - Command-T
